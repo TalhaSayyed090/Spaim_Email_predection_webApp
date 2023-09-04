@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>app_flask</title>
+	<link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+	<div class="color">
+        <div class="menubar">
+        <ul>
+            <li> <a href="./candiate_login.html" class="active"> Log in </a></li>
+            
+            <li> <a href="#"> Contact </a>
+            <div class="submenu">
+                <ul>
+                    <li> <a href="#"> +92 333 4444444 </a> </li>
+                    <li> <a href="#"> +92 444 6666666 </a></li>
+                    <li> <a href="#"> +92 555 7777777 </a> </li>
+                </ul>
+            </div>
+            </li>
+            <li> <a href="#"> About Us</li></a>
+            <li> <a href="#"> Descreption</li></a>
+            <li> <a href="#"> Help</li> </a>
+        </ul>
+        </div>
+        <br>
+
+
+
+
+	<div align="center" class="div_first">
+		<p class="p1">WellCome To</p>
+		<h3 class="header1">SPAM EMAIL PREDICTION SYSTEM</h3>
+	</div>
+	<div align="center" class="div_second">
+		<form action="{{url_for('predict')}}" method="POST">
+			<label for="EMAIL">*Inter your Email</label><br/>
+			<textarea name="EMAIL" rows="12" cols="25" required="required"></textarea><br/>
+			<button type="submit">Predict</button>
+			<h2 class="result">Result: {{prediction}}</h2>
+		</form>
+	</div>
+</body>
+</html>
